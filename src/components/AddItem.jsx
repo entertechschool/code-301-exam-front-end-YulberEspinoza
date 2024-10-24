@@ -1,9 +1,7 @@
-import { useState } from 'react';
-
-import { Card, Form, Button } from 'react-bootstrap';
+import { useState } from "react";
+import { Card, Form, Button } from "react-bootstrap";
 
 function AddNewItem(props) {
-
   const [formData, setFormData] = useState({});
 
   function handleChange(event) {
@@ -21,18 +19,32 @@ function AddNewItem(props) {
 
   return (
     <Form data-testid="add-form" onSubmit={handleSubmit}>
-      <Card style={{ width: '18rem' }}>
+      <Card style={{ width: "18rem" }}>
         <Card.Header>Add Item</Card.Header>
         <Card.Body>
           <Form.Group>
             <Form.Label>Item</Form.Label>
-            <Form.Control type="text" placeholder="To Do Item" data-testid="add-form-name" name="name" onChange={handleChange} />
+            <Form.Control
+              type="text"
+              placeholder="To Do Item"
+              data-testid="add-form-name"
+              name="name"
+              onChange={handleChange}
+            />
           </Form.Group>
           <Form.Group>
             <Form.Label>Description</Form.Label>
-            <Form.Control type="text" placeholder="Description" data-testid="add-form-description" name="description" onChange={handleChange} />
+            <Form.Control
+              type="text"
+              placeholder="Description"
+              data-testid="add-form-description"
+              name="description"
+              onChange={handleChange}
+            />
           </Form.Group>
-          <Button variant="primary" type="submit">Add Item</Button>
+          <Button variant="primary" type="submit">
+            Add Item
+          </Button>
         </Card.Body>
       </Card>
     </Form>
